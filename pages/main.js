@@ -15,11 +15,9 @@ const Main = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await fetch(
-        `https://api.example.com/images?previousbatches=a,b`
-      );
+      const response = await fetch(`/api/images?previousbatches=a,b`);
       const data = await response.json();
-      setImages(data);
+      setImages(data[0]);
     } catch (error) {
       console.log(error);
     }
@@ -36,8 +34,7 @@ const Main = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Are we there yet?</h1>
+    <div className="container mx-auto p-4 text-center">
       <Compare
         images={images}
         selectedImage={selectedImage}

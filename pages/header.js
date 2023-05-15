@@ -42,10 +42,18 @@ const Header = () => {
         <a
           href="#"
           onClick={handleStatOpenDialog}
-          className="text-blue-500 hover:underline cursor-pointer"
+          className="text-blue-500 hover:underline cursor-pointer mr-2"
         >
           <Image priority src="rank.svg" height={32} width={32} alt="Stat" />
         </a>
+        <Image
+          priority
+          src="share.svg"
+          height={32}
+          width={32}
+          alt="Stat"
+          className="text-blue-500 hover:underline cursor-pointer mr-2"
+        />
       </div>
       {isAboutDialogOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
