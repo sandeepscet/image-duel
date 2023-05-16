@@ -47,6 +47,12 @@ const Result = ({ machineWins, humanWins, onPlayAgain }) => {
         >
           Share
         </button>
+        <button
+          className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4 ml-4"
+          onClick={onClickPlayAgain}
+        >
+          Close
+        </button>
       </div>
       {isShareDialogOpen && <Share onCloseShare={handleShareCloseDialog} />}
     </div>
