@@ -27,7 +27,7 @@ const Share = ({ onCloseShare }) => {
 
   let pageURL = currentUrl;
 
-  const title = 'Human vs Machine Turing Test of Images';
+  const title = 'Human vs Machine : Turing Test of Images';
   const description = 'Check out the Human vs Machine Turing Test of Images!';
 
   const [copied, setCopied] = useState(false);
