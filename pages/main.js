@@ -27,6 +27,23 @@ const Main = () => {
     }
   };
 
+  const updateStats = async (totalMachineWins, totalHumanWins) => {
+    try {
+      const winner = totalMachineWins >= totalHumanWins ? 1 : 0;
+      const response = await fetch(`/api/stats?winner=${winner}`, {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          winner,
+        }),
+      });
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleImageSelect = (type) => {
     if (type === 0) {
       setTotalHumanWins(totalHumanWins + 1);
@@ -36,6 +53,7 @@ const Main = () => {
 
     if (round === images.length) {
       setResult(true);
+      updateStats(totalMachineWins, totalHumanWins);
     } else {
       setRound(round + 1);
     }

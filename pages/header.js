@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Share from './share';
+import Stats from './stats';
 
 const Header = () => {
   const [isAboutDialogOpen, setAboutDialogOpen] = useState(false);
@@ -94,40 +95,7 @@ const Header = () => {
         </div>
       )}
 
-      {isStatDialogOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
-          <div className="bg-white p-4">
-            <div className="flex flex-grow text-center	justify-center w-auto divide-y">
-              <h2 className="text-lg font-bold mb-2 border-b">
-                Who is winning
-              </h2>
-            </div>
-            <table className="border-collapse w-full text-left mt-2">
-              <thead>
-                <tr>
-                  <th className="bg-gray-200 font-bold text-sm p-2">Human</th>
-                  <th className="bg-gray-200 font-bold text-sm p-2">Machine</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-200 p-2 text-sm">5</td>
-                  <td className="border border-gray-200 p-2 text-sm">10</td>
-                </tr>
-              </tbody>
-            </table>
-            <div className="text-center text-3xl font-bold py-4">
-              Machine is winning so far
-            </div>
-            <button
-              onClick={handleStatCloseDialog}
-              className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 float-right"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+      {isStatDialogOpen && <Stats onCloseStats={handleStatCloseDialog} />}
       {isShareDialogOpen && <Share onCloseShare={handleShareCloseDialog} />}
     </header>
   );

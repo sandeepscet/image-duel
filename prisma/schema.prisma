@@ -1,0 +1,16 @@
+// We want to connect to the MongoDB datasource
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb+srv://chillar:chillar@cluster0.ak7yw.mongodb.net/image-duel?retryWrites=true&w=majority&connectTimeoutMS=5000"
+
+}
+
+generator client {
+  provider        = "prisma-client-js"
+}
+
+model stats {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  humanWins     Int      @default(0)
+  machineWins   Int      @default(0)
+}

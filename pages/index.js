@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Head>
         {' '}
-        <title>Your Page Title</title>
+        <title>Turing Test of Images</title>
         <meta property="og:title" content="Turing Test of Images" />
         <meta
           name="description"
