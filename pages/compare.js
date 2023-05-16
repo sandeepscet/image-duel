@@ -5,7 +5,6 @@ const Compare = ({ round, images, onImageSelect }) => {
     onImageSelect(type);
   };
   const roundImages = images[round - 1];
-  console.log(roundImages);
   return (
     <div className="flex justify-center mb-4">
       <div className="flex flex-col items-center">

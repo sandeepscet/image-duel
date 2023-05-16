@@ -18,3 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - https://www.reddit.com/r/midjourney/comments/12uij2l/one_is_a_real_photo_and_one_is_ai_generated_can/
 - https://twitter.com/javilopen/status/1638284357931528192
+
+## Pending
+
+- meta tag for social site like images on share

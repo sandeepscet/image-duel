@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Share from './share';
 
 const Result = ({ machineWins, humanWins, onPlayAgain }) => {
-  const onClickShare = () => {};
+  const [isShareDialogOpen, setShareDialogOpen] = useState(false);
+
+  const onClickShare = () => {
+    setShareDialogOpen(true);
+  };
 
   const onClickPlayAgain = () => {
     onPlayAgain();
+  };
+
+  const handleShareCloseDialog = () => {
+    setShareDialogOpen(false);
   };
   const winner =
     machineWins >= humanWins
@@ -39,6 +48,7 @@ const Result = ({ machineWins, humanWins, onPlayAgain }) => {
           Share
         </button>
       </div>
+      {isShareDialogOpen && <Share onCloseShare={handleShareCloseDialog} />}
     </div>
   );
 };

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Share from './share';
 
 const Header = () => {
   const [isAboutDialogOpen, setAboutDialogOpen] = useState(false);
   const [isStatDialogOpen, setStatDialogOpen] = useState(false);
+  const [isShareDialogOpen, setShareDialogOpen] = useState(false);
 
   const handleAboutOpenDialog = () => {
     setAboutDialogOpen(true);
@@ -19,6 +21,14 @@ const Header = () => {
 
   const handleStatCloseDialog = () => {
     setStatDialogOpen(false);
+  };
+
+  const handleShareOpenDialog = () => {
+    setShareDialogOpen(true);
+  };
+
+  const handleShareCloseDialog = () => {
+    setShareDialogOpen(false);
   };
 
   return (
@@ -52,6 +62,7 @@ const Header = () => {
           height={32}
           width={32}
           alt="Stat"
+          onClick={handleShareOpenDialog}
           className="text-blue-500 hover:underline cursor-pointer mr-2"
         />
       </div>
@@ -117,6 +128,7 @@ const Header = () => {
           </div>
         </div>
       )}
+      {isShareDialogOpen && <Share onCloseShare={handleShareCloseDialog} />}
     </header>
   );
 };
