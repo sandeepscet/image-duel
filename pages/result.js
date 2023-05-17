@@ -20,9 +20,14 @@ const Result = ({ machineWins, humanWins, onPlayAgain }) => {
       ? `Machine (${machineWins} - ${humanWins})`
       : `Human(${humanWins} - ${machineWins})`;
   const tagline =
-    winner === 'Machine'
+    machineWins >= humanWins
       ? 'Machine Conquers All , Absolute Domination Achieved!!'
       : 'The Power of Humanity, Machine are not there yet!!';
+
+  const resultMessage =
+    machineWins >= humanWins
+      ? 'You selected more machine generated images than real ones.'
+      : 'You selected more real images than machine generated.';
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
@@ -31,6 +36,7 @@ const Result = ({ machineWins, humanWins, onPlayAgain }) => {
           <h2 className="text-lg font-bold mb-2 border-b">Result</h2>
         </div>
         <p className="text-xl">Winner: {winner}</p>
+        <p className="text-base p-2">{resultMessage}</p>
         <blockquote className="p-4">
           <p className="text-xl italic font-medium  text-gray-900">{tagline}</p>
         </blockquote>

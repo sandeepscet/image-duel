@@ -65,18 +65,28 @@ const Main = () => {
   };
 
   const handleImageSelect = (type) => {
-    if (type === 0) {
-      setTotalHumanWins(totalHumanWins + 1);
-    } else {
-      setTotalMachineWins(totalMachineWins + 1);
-    }
+    setLoader(true);
+    setTimeout(() => {
+      // programmatic delay of loader for context switch
+      try {
+        if (type === 0) {
+          setTotalHumanWins(totalHumanWins + 1);
+        } else {
+          setTotalMachineWins(totalMachineWins + 1);
+        }
 
-    if (round === images.length) {
-      setResult(true);
-      updateStats(totalMachineWins, totalHumanWins);
-    } else {
-      setRound(round + 1);
-    }
+        if (round === images.length) {
+          setResult(true);
+          updateStats(totalMachineWins, totalHumanWins);
+        } else {
+          setRound(round + 1);
+        }
+        setLoader(false);
+      } catch (error) {
+        console.log(error);
+        setLoader(false);
+      }
+    }, 500);
   };
 
   const handleOnPlayAgain = () => {
