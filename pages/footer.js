@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -7,10 +8,19 @@ const Footer = () => {
         &copy; {new Date().getFullYear()}{' '}
         <a href="https://chatgpt-prompt-apps.com/" target="_blank">
           Prompt Apps
+          <Image
+            priority
+            src="external.svg"
+            height={16}
+            width={16}
+            alt="external"
+            className="inline"
+          />
         </a>
-        . All rights reserved.
+        {'  '}
+        All rights reserved.
       </p>
-      <p className="mt-2">
+      <p className="mt-2 hidden lg:inline-block">
         Made with{' '}
         <span role="img" aria-label="Love">
           ❤️
