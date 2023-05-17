@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Compare = ({ round, images = [], onImageSelect }) => {
   const handleImageClick = (type) => {
@@ -33,9 +34,13 @@ const Compare = ({ round, images = [], onImageSelect }) => {
                   className="border-4 border-transparent"
                   onClick={() => handleImageClick(image.type)}
                 >
-                  <img
+                  <Image
                     src={image.src}
+                    width={500}
+                    height={500}
+                    quality={100}
                     alt={`Image ${index}`}
+                    loading="eager"
                     className="border-2	 shadow-lg hover:shadow-black hover:shadow-2xl object-cover"
                   />
                 </button>
