@@ -33,34 +33,38 @@ const Stats = ({ onCloseStats }) => {
             Who is winning globally?
           </h2>
         </div>
-        {loader && <Loader />}
-        {!loader && (
-          <>
-            <table className="border-collapse w-full text-left mt-2">
-              <thead>
-                <tr>
-                  <th className="bg-gray-200 font-bold text-sm p-2">Human</th>
-                  <th className="bg-gray-200 font-bold text-sm p-2">Machine</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-200 p-2 text-sm">
-                    {stats.humanWins}
-                  </td>
-                  <td className="border border-gray-200 p-2 text-sm">
-                    {stats.machineWins}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div className="text-center text-3xl font-bold py-4">
-              {stats.machineWins >= stats.humanWins
-                ? 'Machines are winning so far'
-                : 'Machines are not there yet!!'}
-            </div>
-          </>
-        )}
+        <div className="min-h-min	h-32 min-w-min	">
+          {loader && <Loader />}
+          {!loader && (
+            <>
+              <table className="border-collapse w-full text-left mt-2">
+                <thead>
+                  <tr>
+                    <th className="bg-gray-200 font-bold text-sm p-2">Human</th>
+                    <th className="bg-gray-200 font-bold text-sm p-2">
+                      Machine
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 p-2 text-sm">
+                      {stats.humanWins}
+                    </td>
+                    <td className="border border-gray-200 p-2 text-sm">
+                      {stats.machineWins}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="text-center text-3xl font-bold py-4">
+                {stats.machineWins >= stats.humanWins
+                  ? 'Machines are winning so far'
+                  : 'Machines are not there yet!!'}
+              </div>
+            </>
+          )}
+        </div>
         <button
           onClick={handleStatsCloseDialog}
           className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 float-right"

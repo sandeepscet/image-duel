@@ -23,7 +23,7 @@ const Compare = ({ round, images, onImageSelect }) => {
         <h2 className="text-xl font-bold mb-2">
           Round {' ' + round + ' (Out of ' + images.length + ')'}
         </h2>
-        <p className="text-gray-600 mb-4">Tap on the Real photo</p>
+        <p className="text-gray-600">Tap on the Real photo</p>
         <div className="container flex flex-wrap mx-auto justify-center ">
           {roundImages &&
             roundImages.map((image, index) => (
