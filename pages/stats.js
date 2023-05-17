@@ -56,8 +56,8 @@ const Stats = ({ onCloseStats }) => {
             </table>
             <div className="text-center text-3xl font-bold py-4">
               {stats.machineWins >= stats.humanWins
-                ? 'Machine are winning so far'
-                : 'Machine are not there yet!!'}
+                ? 'Machines are winning so far'
+                : 'Machines are not there yet!!'}
             </div>
           </>
         )}

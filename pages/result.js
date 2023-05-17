@@ -31,8 +31,8 @@ const Result = ({ machineWins, humanWins, onPlayAgain }) => {
           <h2 className="text-lg font-bold mb-2 border-b">Result</h2>
         </div>
         <p className="text-xl">Winner: {winner}</p>
-        <blockquote class="p-4">
-          <p class="text-xl italic font-medium  text-gray-900">{tagline}</p>
+        <blockquote className="p-4">
+          <p className="text-xl italic font-medium  text-gray-900">{tagline}</p>
         </blockquote>
 
         <button

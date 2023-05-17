@@ -78,7 +78,7 @@ const Share = ({ onCloseShare }) => {
             }`}
             onClick={copyText}
           >
-            <div class="m-1" height={40} width={40}>
+            <div className="m-1" height={40} width={40}>
               {!copied && (
                 <Image
                   priority

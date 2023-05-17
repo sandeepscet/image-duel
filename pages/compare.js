@@ -4,7 +4,19 @@ const Compare = ({ round, images, onImageSelect }) => {
   const handleImageClick = (type) => {
     onImageSelect(type);
   };
-  const roundImages = images[round - 1];
+
+  const shuffleArray = (array) => {
+    if (array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+    return array;
+  };
+
+  const roundImages = shuffleArray(images[round - 1]);
+
   return (
     <div className="flex justify-center mb-4 ">
       <div className="flex flex-col items-center">

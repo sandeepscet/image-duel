@@ -13,15 +13,35 @@ const Main = () => {
 
   useEffect(() => {
     fetchImages();
-  }, [round]);
+  }, []);
+
+  function getRandomElements(inputArray) {
+    if (inputArray.length <= 5) {
+      return inputArray;
+    }
+
+    const outputArray = [];
+    const usedIndices = new Set();
+
+    while (outputArray.length < 5) {
+      const randomIndex = Math.floor(Math.random() * inputArray.length);
+
+      if (!usedIndices.has(randomIndex)) {
+        usedIndices.add(randomIndex);
+        outputArray.push(inputArray[randomIndex]);
+      }
+    }
+
+    return outputArray;
+  }
 
   const fetchImages = async () => {
     try {
       setLoader(true);
-      const response = await fetch(`/api/images?previousbatches=a,b`);
+      const response = await fetch(`/api/images`);
       const data = await response.json();
       setLoader(false);
-      setImages(data);
+      setImages(getRandomElements(data));
     } catch (error) {
       console.log(error);
     }

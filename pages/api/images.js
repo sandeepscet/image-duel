@@ -4,21 +4,131 @@ export default function handler(req, res) {
   const images = [
     [
       {
-        src: 'https://pbs.twimg.com/media/Frxa0nxWYAAHWLj?format=png&name=small',
+        src: '/images/1/1-r.jpg',
         type: 0,
       },
       {
-        src: 'https://pbs.twimg.com/media/Frxa2TmXoAAMFCB?format=jpg&name=large',
+        src: '/images/1/1-m.jpg',
         type: 1,
       },
     ],
     [
       {
-        src: 'https://images.unsplash.com/photo-1682687982185-531d09ec56fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        src: '/images/1/2-r.jpg',
         type: 0,
       },
       {
-        src: 'https://images.unsplash.com/photo-1682809462945-a083392aacaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+        src: '/images/1/2-m.png',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/3-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/3-m.png',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/4-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/4-m.jpg',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/5-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/5-m.png',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/6-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/6-m.png',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/7-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/7-m.jpg',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/8-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/8-m.png',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/9-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/9-m.jpg',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/10-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/10-m.png',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/11-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/11-m.png',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/12-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/12-m.png',
+        type: 1,
+      },
+    ],
+    [
+      {
+        src: '/images/1/13-r.jpg',
+        type: 0,
+      },
+      {
+        src: '/images/1/13-m.jpg',
         type: 1,
       },
     ],
