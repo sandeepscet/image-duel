@@ -29,7 +29,10 @@ export default function Home() {
           name="twitter:description"
           content="Check out the Human vs Machine Turing Test and try to win"
         />
-        <meta name="twitter:image" content="logo500.png" />
+        <meta
+          name="twitter:image"
+          content="https://image-duel.vercel.app/logo500.png"
+        />
       </Head>
       <Header></Header>
       <Main></Main>
