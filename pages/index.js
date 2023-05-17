@@ -18,8 +18,13 @@ export default function Home() {
           property="og:description"
           content="Check out the Human vs Machine Turing Test and try to win"
         />
-        <meta property="og:image" content="logo500.png" />
+        <meta
+          property="og:image"
+          content="https://image-duel.vercel.app/logo500.png"
+        />
+        <meta property="og:url" content="https://image-duel.vercel.app" />
         <meta name="twitter:title" content="Turing Test of Images" />
+        <meta property="twitter:card" content="summary_large_image"></meta>
         <meta
           name="twitter:description"
           content="Check out the Human vs Machine Turing Test and try to win"
