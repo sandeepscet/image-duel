@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Compare = ({ round, images, onImageSelect }) => {
+const Compare = ({ round, images = [], onImageSelect }) => {
   const handleImageClick = (type) => {
     onImageSelect(type);
   };
