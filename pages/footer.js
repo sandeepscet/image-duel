@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-200 p-4 text-center fixed inset-x-0 bottom-0 -z-50">
       <p className="text-sm text-gray-600">
         &copy; {new Date().getFullYear()}{' '}
-        <a href="https://chatgpt-prompt-apps.com/" target="_blank">
+        <Link href="https://chatgpt-prompt-apps.com/" target="_blank">
           Prompt Apps
           <Image
             priority
@@ -16,7 +17,7 @@ const Footer = () => {
             alt="external"
             className="inline"
           />
-        </a>
+        </Link>
         {'  '}
         All rights reserved.
       </p>

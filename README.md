@@ -21,5 +21,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Pending
 
-- meta tag for social site like images on share
 - Show Answer on click of image
+- Message on result is wrong

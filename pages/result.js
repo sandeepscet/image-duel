@@ -39,7 +39,7 @@ const Result = ({ machineWins, humanWins, onPlayAgain }) => {
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
           onClick={onClickPlayAgain}
         >
-          Let's Play Again
+          Let&lsquo;s Play Again
         </button>
         <button
           className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 ml-4"
